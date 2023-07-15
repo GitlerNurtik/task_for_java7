@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Arrays;
+
 public class Task {
 
     /**
@@ -9,7 +11,18 @@ public class Task {
      * @return 12;
      */
     public int getSum(int a) {
-        return 0;
+        int b = 1;
+        int count1 = 0;
+        int a2 = 0;
+        while(a < 0){
+            a = a/b;
+            count1++;
+        }
+        for (int i = 0; i < count1; i++) {
+            a2+=a/(Math.pow(10,count1));
+        }
+
+        return count1;
     }
 
     /**
@@ -20,7 +33,30 @@ public class Task {
      *              Например: четвертый максимальный элемент это 5.
      */
     public void getArray(int[] array) {
+        int maxNumber = 0;
+        int max2Number = array[1];
+        int max3Number = array[1];
+        int max4Number = array[1];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > maxNumber) {
+                maxNumber += array[i];
+            }
+        }
+        for (int i = 01; i < array.length; i++) {
+            if (array[i] > max2Number && max2Number > maxNumber){
+                max2Number+=array[i];
+        }
+            }
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > max3Number && max3Number > max2Number){
+                max3Number+=array[i];
+            }}
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > max4Number && max4Number > max3Number){
+                max4Number+=array[i];
+            }}
 
+        System.out.println(max4Number);
     }
 
 
@@ -32,8 +68,19 @@ public class Task {
      * @return "Ш"
      */
     public char getLastSymbol(String text) {
+        char[] alphabet = new char[]{'a','б','в','г','д','е','ё','ж','з','и','й','к','л','м','н','о','п','р','с','т','у','ф','х','ц','ч','ш','щ','ъ','ы','ь','э','ю','я'};
+        char q1 = 0;
+        int d1 = 0;
+        char[] text1 = text.toCharArray();
+        for (int i = 0; i < text.length(); i++) {
+            if(text.toCharArray()[d1] == alphabet[i]){
+                q1 = alphabet[i];
+                d1++;
+                i=0;
+            }
 
-        return 0;
+        }
+        return q1;
     }
 
 
@@ -56,6 +103,7 @@ public class Task {
      * @return телефон
      */
     public String getMaxDuplicateWord(String[] text) {
+
         return "";
     }
 
